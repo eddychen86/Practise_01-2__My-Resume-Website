@@ -203,8 +203,9 @@
 	        return false;
 	    } else {
 	        alert("成功送出");
+		$.cookie("textarea",text);
+	        console.log(document.cookie);
 	    }
-	    console.log(text);
 	}
     );
 </script>
