@@ -199,7 +199,9 @@
     $("button").click(
 	function click() {
 	    var textarea = document.getElementById("text").value;
-	    if ( textarea != null || textarea != "" ) {
+	    if ( textarea == null || textarea == "" ) {
+	        return false;
+	    } else {
 	        alert("成功送出");
 	    }
 	    console.log("textarea");
