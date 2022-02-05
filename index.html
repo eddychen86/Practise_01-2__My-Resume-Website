@@ -181,8 +181,8 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <h5>留言板：</h5>
-                    <textarea name="text" placeholder="請填寫"></textarea>
-                    <button id="message" class="btn btn-sm btn-light">我想留言！</button>
+                    <textarea name="text" id="text" placeholder="請填寫"></textarea>
+                    <button id="message" class="btn btn-sm btn-light" onclick="return click(this)">我想留言！</button>
                 </div>
             </div>
             <p class="copyright col-12">© Eddy 2022 All Rights Reserved</p>
@@ -195,6 +195,15 @@
 <script>
     var rellax = new Rellax('.rellax', {
 		center: true,
-	});
+    });
+    $("button").click(
+	function click() {
+	    var textarea = document.getElementById("text").value;
+	    if ( textarea != null || textarea != "" ) {
+	        alert("成功送出");
+	    }
+	    console.log("textarea");
+	}
+    );
 </script>
 </html>
