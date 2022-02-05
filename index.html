@@ -198,13 +198,13 @@
     });
     $("button").click(
 	function push() {
-	    var text = document.getElementById("text").value;
-	    if ( text == null || text == "" ) {
+	    var text = document.getElementById("text");
+	    if ( text.value == null || text.value == "" ) {
 	        return false;
 	    } else {
 	        alert("成功送出");
 	    }
-	    console.log("text");
+	    console.log("text.value");
 	}
     );
 </script>
